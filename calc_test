@@ -1,0 +1,30 @@
+while True:
+    a = input("Введите первую цифру: ")
+    if a.isdigit():
+        print(a)
+        break
+    else:
+        print("Нужно ввести именно цифру. Попробуйте еще раз")
+while True:
+    b = input("Введите вторую цифру: ")
+    if b.isdigit():
+        print(b)
+        break
+    else:
+        print("Нужно ввести именно цифру. Попробуйте еще раз")
+while True:
+    c = input("Введите арифметический знак: сложение (+), вычитание (-), умножение (*) или деление (/): ")
+    if c == ("+"):
+        print("Сумма равна " + str(int(a) + int(b)))
+    if c == ("-"):
+        print("Вычитание равно " + str(int(a) - int(b)))
+    if c == ("*"):
+        print("Умножение равно " + str(int(a) * int(b)))
+    if c == ("/"):
+        try:
+            zero = str(int(a) / int(b))
+        except ZeroDivisionError:
+            zero = 0
+            print("На ноль делить нельзя")
+            break
+        print("Деление равно " + str(int(a) // int(b)))
